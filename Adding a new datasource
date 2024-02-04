@@ -21,7 +21,7 @@ SELECT  order_id,
         customer_birthday,
         customer_email 
   FROM external_source.craft_products_orders t1
-  JOIN external_source.customers t2 using (customer_id) 
+  JOIN external_source.customers t2 using (customer_id); 
 
 /* обновление существующих записей и добавление новых в dwh.d_craftsmans */
 MERGE INTO dwh.d_craftsman d
